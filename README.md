@@ -1,16 +1,9 @@
-# textalk
+# textalk (文字對談)
 
-A new Flutter project.
+這個簡易的程式主要是因應老年人的需要而誕生的
+由於行動裝置大部分都能用語音輸入，所以，我就直接利用 `TextField` 來達成了。
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 使用方式
+上方的 `Slider` 可調節字的大小，並且會記住。
+右上方的 `X` 可以清除文字。
+其餘的點了就可以輸入文字了。
