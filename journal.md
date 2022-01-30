@@ -13,3 +13,7 @@
 
 ### auto-deploying, using variables
 1. [How to set environment variables](https://docs.github.com/en/actions/learn-github-actions/environment-variables)
+
+### sed 要引入 env 的問題
+它會被當字串使喚，除非用`'$Repository'` (即 '...')包起來才可以
+[StackOverflow](https://stackoverflow.com/questions/584894/environment-variable-substitution-in-sed)
