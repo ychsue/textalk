@@ -13,18 +13,41 @@ class _MyTextInputState extends State<MyTextInput> {
   final _txtCtrler = TextEditingController();
   final controller = Get.find<HomeController>();
 
+  final cHint = "點擊此輸入文字，\n上面滑條放大文字，\n右邊X清除文字。".obs;
+  String _hintTxt() {
+    final now = DateTime.now();
+    String result = cHint.value;
+    if((now.month==12 && now.day >= 25) || (now.month==1) ||(now.month==2 && now.day <= 5)) {
+      result = "恭賀新禧\n"+result;
+    }
+    return result;
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    cHint.value = _hintTxt();
+  }
+
+  @override
+  void dispose() {
+    _txtCtrler.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Stack(
       children: [
         Obx(() => TextField(
-          expands: true,
+              expands: true,
               controller: _txtCtrler,
               keyboardType: TextInputType.multiline,
               maxLines: null,
-              decoration: const InputDecoration(
+              decoration: InputDecoration(
                 isDense: false,
-                contentPadding: EdgeInsets.all(8),
+                hintText: cHint.value,
+                contentPadding: const EdgeInsets.all(8),
                 border: InputBorder.none,
               ),
               style: TextStyle(fontSize: controller.fontSize.value),

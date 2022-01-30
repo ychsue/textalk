@@ -11,7 +11,7 @@ class HomePage extends GetView<HomeController> {
   Widget build(BuildContext context) {
     return Scaffold(
     appBar: AppBar(
-      leading: const Text('文字對談'),
+      leading: const Icon(Icons.zoom_in_outlined),
       title: Obx(()=>Slider(value: controller.fontSize.value,
        onChanged: (v)=>controller.fontSize.value=v, 
        min:12, max:200,

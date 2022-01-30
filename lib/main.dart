@@ -9,6 +9,7 @@ void main() async {
   await GetStorage.init();
   runApp(
     GetMaterialApp(
+      title: "文字代替說話",
         debugShowCheckedModeBanner: false,
         // initialRoute: Routes.SPLASH,
         // theme: appThemeData,

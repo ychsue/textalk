@@ -2,7 +2,7 @@ import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 
 class HomeController extends GetxController {
-  final fontSize = 12.0.obs;
+  final fontSize = 24.0.obs;
   late Worker _fontSizeWorker;
   static const String fontSizeKey = "fontSize";
 
