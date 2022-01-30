@@ -17,3 +17,7 @@
 ### sed 要引入 env 的問題
 它會被當字串使喚，除非用`'$Repository'` (即 '...')包起來才可以
 [StackOverflow](https://stackoverflow.com/questions/584894/environment-variable-substitution-in-sed)
+
+## Slow Loading Problem
+### 藉由設定 Spinner 來解決
+[用css解決使用者誤認沒在動作的問題](https://itnext.io/fix-flutter-web-loading-time-with-a-loading-spinner-c5dd36a29f5b)
