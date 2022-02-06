@@ -22,5 +22,6 @@
 ### 藉由設定 Spinner 來解決
 [用css解決使用者誤認沒在動作的問題](https://itnext.io/fix-flutter-web-loading-time-with-a-loading-spinner-c5dd36a29f5b)
 
-## For Chromecast
-概念來源： [github 上 CastHelloText-chrome 的範例](https://github.com/AVGP/CastHelloText-chrome)
+## [2022-02-06] For Chromecast
+1. 概念來源： [github 上 CastHelloText-chrome 的範例](https://github.com/AVGP/CastHelloText-chrome)
+2. 讓使用者能在輸入文字與改變字體大小都能邊設定 Chromecast

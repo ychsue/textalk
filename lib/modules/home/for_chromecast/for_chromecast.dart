@@ -15,9 +15,15 @@ class ForChromecast extends StatelessWidget {
         return const SizedBox();
       } else {
         return IconButton(
-          onPressed: ()=>(c.hasSession.value==false)?
-            c.chromecastRepository.sendMessage("歡迎使用此App. \n Welcome to use this app."):
-            c.chromecastRepository.stopSession(),
+          onPressed: () {
+            if (c.hasSession.value==false) {
+              c.setChromeFontSize(c.fontSize.value, c.chromeTimes.value);
+              c.chromecastRepository.sendMessage("歡迎使用此App. \n Welcome to use this app.");
+            
+            } else {
+              c.chromecastRepository.stopSession();
+            }
+          },
           icon: FaIcon(
             FontAwesomeIcons.chromecast,
             color: (c.hasSession.value==false)?Colors.yellow:Colors.red,

@@ -40,7 +40,8 @@ class _MyTextInputState extends State<MyTextInput> {
     return Stack(
       children: [
         Obx(() => TextField(
-              expands: true,
+              expands: true, 
+              onChanged: (v)=>controller.textValue.value =v,
               controller: _txtCtrler,
               keyboardType: TextInputType.multiline,
               maxLines: null,

@@ -25,12 +25,26 @@ class HomePage extends GetView<HomeController> {
        ),),
     
 
-    body: FractionallySizedBox(
-      heightFactor: 1,
-      child: Container(
-        color: Colors.amber,
-        child: const MyTextInput(), 
+    body: Column(
+      children: [
+        // For Chromecast IF it is available
+        (controller.hasSession.value==true)?
+          ListTile(leading: const Icon(Icons.expand), title: 
+            Slider(value: controller.chromeTimes.value,
+               min: 1,
+               max: 20,
+               onChanged: (v){
+                  controller.chromeTimes.value =v;
+                },),):
+          const SizedBox(),
+        // Main Text Input Region
+        Expanded(
+          child: Container(
+            color: Colors.amber,
+            child: const MyTextInput(), 
+            ),
         ),
+      ],
     ),
     ),);
   }
