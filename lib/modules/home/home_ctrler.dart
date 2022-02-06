@@ -66,6 +66,8 @@ class HomeController extends GetxController {
       debounce(textValue, 
         (String v){
           if (hasSession.value==true) {
+            final buf = "> "+v;
+            v= buf.replaceAll('\n', '<br/>');
             chromecastRepository.sendMessage(v);
           }
         }, //time: const Duration(milliseconds: 1)

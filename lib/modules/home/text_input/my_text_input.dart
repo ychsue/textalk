@@ -13,7 +13,7 @@ class _MyTextInputState extends State<MyTextInput> {
   final _txtCtrler = TextEditingController();
   final controller = Get.find<HomeController>();
 
-  final cHint = "點擊此輸入文字，\n上面滑條放大文字，\n右邊X清除文字。".obs;
+  final cHint = "在此輸入文字，\n Input text here".obs;
   String _hintTxt() {
     final now = DateTime.now();
     String result = cHint.value;
