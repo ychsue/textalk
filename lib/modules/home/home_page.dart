@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:textalk/modules/home/for_chromecast/for_chromecast.dart';
 import 'package:textalk/modules/home/home_ctrler.dart';
 import 'package:textalk/modules/home/text_input/my_text_input.dart';
 
@@ -9,17 +10,20 @@ class HomePage extends GetView<HomeController> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return Obx(()=>Scaffold(
     appBar: AppBar(
       leading: const Icon(Icons.zoom_in_outlined),
-      title: Obx(()=>Slider(value: controller.fontSize.value,
+      actions: const [Padding(
+        padding: EdgeInsets.all(8.0),
+        child: ForChromecast()),],
+      title: Slider(value: controller.fontSize.value,
        onChanged: (v)=>controller.fontSize.value=v, 
        min:12, max:200,
        inactiveColor: Colors.yellow,
        activeColor: Colors.red,
        thumbColor: Colors.amber,
        ),),
-    ),
+    
 
     body: FractionallySizedBox(
       heightFactor: 1,
@@ -28,6 +32,6 @@ class HomePage extends GetView<HomeController> {
         child: const MyTextInput(), 
         ),
     ),
-    );
+    ),);
   }
 }

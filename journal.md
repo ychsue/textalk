@@ -21,3 +21,6 @@
 ## Slow Loading Problem
 ### 藉由設定 Spinner 來解決
 [用css解決使用者誤認沒在動作的問題](https://itnext.io/fix-flutter-web-loading-time-with-a-loading-spinner-c5dd36a29f5b)
+
+## For Chromecast
+概念來源： [github 上 CastHelloText-chrome 的範例](https://github.com/AVGP/CastHelloText-chrome)
