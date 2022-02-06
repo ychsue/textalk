@@ -32,7 +32,7 @@ class HomePage extends GetView<HomeController> {
           ListTile(leading: const Icon(Icons.expand), title: 
             Slider(value: controller.chromeTimes.value,
                min: 1,
-               max: 20,
+               max: 8,
                onChanged: (v){
                   controller.chromeTimes.value =v;
                 },),):

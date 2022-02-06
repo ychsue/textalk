@@ -68,7 +68,7 @@ class HomeController extends GetxController {
           if (hasSession.value==true) {
             chromecastRepository.sendMessage(v);
           }
-        })
+        }, time: const Duration(milliseconds: 1))
     );
   }
 
