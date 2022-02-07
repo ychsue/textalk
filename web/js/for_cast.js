@@ -9,7 +9,7 @@ var callbackHasSession = null; //void Function(bool)
 /**
  * Call initialization for Cast
  */
- if (!chrome.cast || !chrome.cast.isAvailable) {
+if (!!window.chrome && (!chrome.cast || !chrome.cast.isAvailable)) {
     setTimeout(initializeCastApi, 1000);
 }
   
@@ -144,7 +144,7 @@ function setCallback4appendMessage(fun) {
 }
 
 function isAvailable() {
-    return !!chrome && !!chrome.cast && !!chrome.cast.isAvailable;
+  return !!window.chrome && !!chrome.cast && !!chrome.cast.isAvailable;
 }
 
 /// void Function(bool) fun

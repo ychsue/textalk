@@ -26,3 +26,4 @@
 1. 概念來源： [github 上 CastHelloText-chrome 的範例](https://github.com/AVGP/CastHelloText-chrome)
 2. 讓使用者能在輸入文字與改變字體大小都能邊設定 Chromecast
 3. 由於語音輸入它會常常會讓字串變回原來的，可能是當掉的原因，所以，試著給一個初始值，看看能否改善這個問題。
+4. `chrome` 只出現在 Chrome與Edge 瀏覽器，Safari 等沒有。
